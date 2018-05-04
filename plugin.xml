@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.zc.demo.toast" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>toast</name>
+	<!--描述信息-->  
+    <description>卸载插件</description>  
+    <js-module name="toast" src="www/toast.js">
+        <clobbers target="cordova.plugins.toast" />
+    </js-module>
+	
+	<!--platform：支持的平台-->  
+    <platform name="android">  
+    <!--插件的配置信息，build的时候会添加到res/xml/config.xml 文件中-->  
+        <config-file parent="/*" target="res/xml/config.xml">  
+            <feature name="UninstallPlugin">  
+                <param name="android-package" value="android.UninstallPlugin"/>  
+            </feature>  
+        </config-file>  
+        <!-- 可以定义自己的一些权限信息，build后会添加到主配置文件中 -->  
+        <config-file target="AndroidManifest.xml" parent="/*">  
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>  
+        </config-file>  
+         <source-file src="src/android/UninstallPlugin.java" target-dir="src/android"/>  
+    </platform>
+</plugin>

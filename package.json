@@ -1,0 +1,18 @@
+{
+  "name": "toast",
+  "version": "1.0.0",
+  "description": "uninstallPlugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "uu"
+  },
+  "repository": {
+    "type": "git",
+    "url": "uu"
+  },
+  "keywords": [
+    "uu"
+  ],
+  "author": "uu",
+  "license": "UNLICENSED"
+}
